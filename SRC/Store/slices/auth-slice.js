@@ -20,36 +20,35 @@ export const AuthSlice = createSlice({
     },
     setUserType(state, action) {
       state.user_type = action.payload;
-    }
-    // SetFCMToken(state, action) {
-    //   state.fcmToken = action?.payload?.fcmToken;
-    // },
-    // SetUserRole(state, action) {
-    //   console.log('in reduxxxxxxxxx', action.payload)
-    //   state.role = action?.payload;
-    // },
-    // setUserLogin(state, action) {
-    //   state.token = action?.payload;
-    // },
-    // setUserLogoutAuth(state, action) {
-    //   state.token = null;
-    //   state.fcmToken = null;
-    // },
-    // setWalkThrough(state, action) {
-    //   state.userWalkThrough = action.payload;
-    //   // console.log("🚀 ~ setWalkThrough ~ action.payload:", action.payload)
-    // },
-
+    },
+    SetFCMToken(state, action) {
+      state.fcmToken = action?.payload?.fcmToken;
+    },
+    SetUserRole(state, action) {
+      console.log('in reduxxxxxxxxx', action.payload)
+      state.role = action?.payload;
+    },
+    setUserLogin(state, action) {
+      state.token = action?.payload;
+    },
+    setUserLogoutAuth(state, action) {
+      state.token = null;
+      state.fcmToken = null;
+    },
+    setWalkThrough(state, action) {
+      state.userWalkThrough = action.payload;
+      // console.log("🚀 ~ setWalkThrough ~ action.payload:", action.payload)
+    },
   },
 });
 
 export const {
-  // setUserLogin,
-  // setUserLogoutAuth,
+  setUserLogin,
+  setUserLogoutAuth,
   setUserToken,
-  // SetFCMToken,
-  // setWalkThrough,
-  // SetUserRole,
+  SetFCMToken,
+  setWalkThrough,
+  SetUserRole,
   setUserType
 } = AuthSlice.actions;
 

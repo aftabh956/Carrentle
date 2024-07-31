@@ -53,7 +53,7 @@ const Drawer = () => {
       iconName: 'compass-outline',
       iconType: Ionicons,
       onPress: () => {
-        // navigation.navigate('Myjoruney');
+        navigation.navigate('MyJourneys');
       },
     },
     {

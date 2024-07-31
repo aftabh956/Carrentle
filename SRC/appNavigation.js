@@ -43,6 +43,7 @@ import TaxiAvailability from './Screens/TaxiAvailability';
 import BoardingPointSearchScreen from './Screens/BoardingPointSearchScreen';
 import Start from './Screens/Start';
 import MyWallet from './Screens/MyWallet';
+import MyJourneys from './Screens/MyJourneys';
 
 const AppNavigator = () => {
   const isGoalCreated = useSelector(state => state.authReducer.isGoalCreated);
@@ -55,14 +56,11 @@ const AppNavigator = () => {
   const RootNavLogged = createNativeStackNavigator();
 
   const AppNavigatorContainer = () => {
-    const firstScreen = 'MyWallet'
-
-
-    // walkThrough == false
-    //   ? 'WalkThroughScreen'
-    //   : token == null
-    //   ? 'LoginScreen'
-    //   : 'MyDrawer';
+    const firstScreen = walkThrough == false
+      ? 'WalkThroughScreen'
+      : token == null
+      ? 'LoginScreen'
+      : 'MyDrawer';
 
     return (
       <NavigationContainer ref={navigationService.navigationRef}>
@@ -250,6 +248,10 @@ export const MyDrawer = () => {
       <DrawerNavigation.Screen
         name="TermsAndConditions"
         component={TermsAndConditions}
+      />
+         <DrawerNavigation.Screen
+        name="MyJourneys"
+        component={MyJourneys}
       />
     </DrawerNavigation.Navigator>
   );
