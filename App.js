@@ -35,7 +35,7 @@ const App = () => {
     //   publishableKey={"pk_test_51NjQZRBqyObuQCkVVZujGGQ9w7PjZegPiZvL9MEH12KsxQmTsLpBxsXdeyN8Tu3mYkN8YZt8WutsTCEexDwIOxaB00a6zjjE12"}
     //   // merchantIdentifier="merchant.identifier" // required for Apple Pay
     //   // urlScheme="your-url-scheme" // required for 3D Secure and bank redirects
-    // >
+    // > fgfdfdgfdfgdgdfgdfgdfgdfgd
     <Provider store={store}>
       <PersistGate loading={null} persistor={persistor}>
         <NativeBaseProvider>
